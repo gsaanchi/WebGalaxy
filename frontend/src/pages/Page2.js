@@ -21,314 +21,752 @@ const Page2 = () => {
   useEffect(() => {
     if (!editorRef.current) {
       const templateHTML = `
-        <header class="header">
-          <nav class="nav">
-            <h3 class="nav__logo">Rosie.dev</h3>
-            <div class="nav__menu">
-              <ul class="nav__list">
-                <li><a href="#home" class="nav__link active-link">Home</a></li>
-                <li><a href="#skills" class="nav__link">Skills</a></li>
-                <li><a href="#connect" class="nav__link">Links</a></li>
-                <li><a href="#contact" class="nav__button">Login</a></li>
-              </ul>
-            </div>
-          </nav>
-        </header>
-        <section class="hero" id="home">
-          <div class="hero__container">
-            <div class="hero__content">
-              <h1 class="hero__title">
-                Hi, I'm Rosie.
-                <span class="hero__title-highlight">a full-stack web developer</span>
-              </h1>
-              <p class="hero__description">
-                Hi, I'm Rosie — a full-stack developer specializing in creating
-                robust and scalable web applications using MongoDB, Express,
-                React, and Node.js.
-              </p>
-              <div class="hero__buttons">
-                <a href="#connect" class="button">Let's Talk</a>
-                <a href="#skills" class="button button--ghost">View Skills</a>
+          <nav>
+      <div class="nav__logo">ProCoder09<span></span></div>
+      <ul class="nav__links">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#">Destinations</a></li>
+        <li class="link"><a href="#">Pricing</a></li>
+        <li class="link"><a href="#">Reviews</a></li>
+      </ul>
+      <button class="btn">Contact Us</button>
+    </nav>
+    <header>
+      <div class="section__container header__container">
+        <div class="header__image">
+          <img src="header-1.jpg" alt="header" />
+          <img src="header-2.jpg" alt="header" />
+        </div>
+        <div class="header__content">
+          <div>
+            <p class="sub__header">Book Now</p>
+            <h1>The Smiling 😊<br />agent for travel</h1>
+            <p class="section__subtitle">
+              Make your travel more enjoyable with us. We are the best travel
+              agency and we are providing the best travel services for our
+              clients.
+            </p>
+            <div class="action__btns">
+              <button class="btn">Plan a Trip</button>
+              <div class="story">
+                <div class="video__image">
+                  <img src="story.jpg" alt="story" />
+                  <span><i class="ri-play-fill"></i></span>
+                </div>
+                <span>Watch our story</span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container destination__container">
+      <div class="section__header">
+        <div>
+          <h2 class="section__title">Explore top destinations</h2>
+          <p class="section__subtitle">
+            Explore your suitable and dream places around the world. Here you
+            can find your right destination.
+          </p>
+        </div>
+        <div class="destination__nav">
+          <span><i class="ri-arrow-left-s-line"></i></span>
+          <span><i class="ri-arrow-right-s-line"></i></span>
+        </div>
+      </div>
+      <div class="destination__grid">
+        <div class="destination__card">
+          <img src="destination-1.jpg" alt="destination" />
+          <div class="destination__details">
+            <p class="destination__title">Banff</p>
+            <p class="destination__subtitle">Canada</p>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="destination-2.jpg" alt="destination" />
+          <div class="destination__details">
+            <p class="destination__title">Machu Picchu</p>
+            <p class="destination__subtitle">Peru</p>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="destination-3.jpg" alt="destination" />
+          <div class="destination__details">
+            <p class="destination__title">Lauterbrunnen</p>
+            <p class="destination__subtitle">Switzerland</p>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="destination-4.jpg" alt="destination" />
+          <div class="destination__details">
+            <p class="destination__title">Zhangjiajie</p>
+            <p class="destination__subtitle">China</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trip">
+      <div class="section__container trip__container">
+        <h2 class="section__title">Best trip package</h2>
+        <p class="section__subtitle">
+          Explore your suitable and dream places around the world. Here you can
+          find your right destination.
+        </p>
+        <div class="trip__grid">
+          <div class="trip__card">
+            <img src="trip-1.jpg" alt="trip" />
+            <div class="trip__details">
+              <p>Wasserwerk Frelberg, Germany</p>
+              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+              <div class="booking__price">
+                <div class="price"><span>From</span> $300</div>
+                <button class="book__now">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="trip__card">
+            <img src="trip-2.jpg" alt="trip" />
+            <div class="trip__details">
+              <p>Patagonia, Argentina and Chile</p>
+              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+              <div class="booking__price">
+                <div class="price"><span>From</span> $450</div>
+                <button class="book__now">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="trip__card">
+            <img src="trip-3.jpg" alt="trip" />
+            <div class="trip__details">
+              <p>The Dolomites, Italy</p>
+              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+              <div class="booking__price">
+                <div class="price"><span>From</span> $400</div>
+                <button class="book__now">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="view__all">
+          <button class="btn">View All</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallary">
+      <div class="section__container gallary__container">
+        <div class="image__gallary">
+          <div class="gallary__col">
+            <img src="gallery-1.jpg" alt="gallary" />
+          </div>
+          <div class="gallary__col">
+            <img src="gallery-2.jpg" alt="gallary" />
+            <img src="gallery-3.jpg" alt="gallary" />
+          </div>
+        </div>
+        <div class="gallary__content">
+          <div>
+            <h2 class="section__title">
+              Our trip gallary that will inspire you
+            </h2>
+            <p class="section__subtitle">
+              Explore your suitable and dream places around the world. Here you
+              can find your right destination.
+            </p>
+            <button class="btn">View All</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <div class="subscribe__content">
+          <h2 class="section__title">Subscribe to get special prize</h2>
+          <p class="section__subtitle">
+            Explore your suitable and dream places around the world. Here you
+            can find your right destination.
+          </p>
+        </div>
+        <div class="subscribe__form">
+          <form>
+            <input type="email" placeholder="Your email here" />
+            <button class="btn" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Code Champion<span>.</span></h3>
+          <p>
+            Explore your suitable and dream places around the world. Here you
+            can find your right destination.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <p>FAQs</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="footer__col">
+          <h4>Address</h4>
+          <p>
+            <span>Address:</span> 280 Wilson Street, Cima, California, 92323,
+            United States
+          </p>
+          <p><span>Email:</span> info@Code Champion.com</p>
+          <p><span>Phone:</span> +91 9876543210</p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2023 Web Design Mastery. All rights reserved.
+      </div>
+    </footer>
       `;
 
       const templateCSS = `
         
- {
-  margin: 0;
+ :root {
+  --primary-color: #3685fb;
+  --primary-color-dark: #2f73d9;
+  --secondary-color: #fafcff;
+  --text-dark: #0d213f;
+  --text-light: #767268;
+  --extra-light: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
 }
 
-body {
-  font-family: "Inter", sans-serif;
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.section__subtitle {
   font-size: 1rem;
-  background-color: #f8fafc;
-  color: #0f172a;
-  line-height: 1.6;
+  color: var(--text-dark);
+  max-width: calc(var(--max-width) / 2);
 }
 
-ul {
-  list-style: none;
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
-/* ===== REUSABLE CLASSES ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.section {
-  padding: 8rem 0;
-}
-
-.section__title {
-  font-size: 2.75rem;
-  color: #0f172a;
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
+img {
   width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: block;
 }
 
-.nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  height: 5rem;
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav__logo {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #2563eb;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
 }
 
-.nav__list {
+.nav__logo span {
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
   display: flex;
-  gap: 2.5rem;
   align-items: center;
-}
-
-.nav__link {
-  font-weight: 700;
-}
-
-.nav__link:hover {
-  border-bottom: 2px solid #2563eb;
-  padding-bottom: 10px;
-}
-
-.nav__button {
-  background-color: #2563eb;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-}
-
-.nav__button:hover {
-  background-color: #3b82f6;
-}
-
-
-.hero {
-  padding: 8rem 0;
-}
-
-.hero__container {
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.hero__title {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
-
-.hero__title-highlight {
-  color: #2563eb;
-  display: block;
-  margin-top: 0.5rem;
-}
-
-.hero__description {
-  color: #64748b;
-  margin-bottom: 2.5rem;
-}
-
-.hero__buttons {
-  display: flex;
   gap: 1rem;
 }
 
-.button {
-  background-color: #2563eb;
-  color: #ffffff;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
+.link a {
+  padding: 0 1rem;
+  color: var(--text-dark);
+  transition: 0.3s;
 }
 
-.button--ghost {
-  background-color: transparent;
-  border: 2px solid #2563eb;
-  color: #2563eb;
+.link a:hover {
+  color: var(--primary-color);
 }
 
-
-.skills__container {
-  max-width: 1000px;
-  margin: 0 auto;
+header {
+  background-color: var(--secondary-color);
 }
 
-.skills__content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.skills__info {
-  margin-bottom: 3rem;
-  max-width: 500px;
-}
-
-.skills__subtitle {
-  font-size: 2rem;
-  color: #0f172a;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.skills__description {
-  color: #64748b;
-  line-height: 1.8;
-}
-
-.skills__list {
+.header__container {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.skills__card {
-  background: linear-gradient(145deg, #ffffff, #e3e9ef);
-  padding: 1.75rem;
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.skills__card-header {
-  margin-bottom: 1rem;
-}
-
-.skills__card-title {
-  font-size: 1.25rem;
-  color: #0f172a;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-}
-
-.skills__card-description {
-  color: #64748b;
-  margin-bottom: 1.25rem;
-}
-
-.skills__icon {
-  font-size: 2rem;
-}
-
-.skills__percentage-text {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.skills__bar {
-  height: 0.4rem;
-  background-color: #e2e8f0;
-  border-radius: 1rem;
-  margin-top: auto;
-}
-
-.skills__percentage {
-  height: 100%;
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
-  border-radius: 1rem;
-}
-
-.skills__image {
-  margin-top: 150px;
-}
-
-.skills__image img {
-  width: 90%;
-  object-fit: cover;
-  border-radius: 1.5rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background-color: #0f172a;
-  color: #ffffff;
-  padding: 4rem 0 2rem;
-}
-
-.footer__title {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.footer__social {
-  display: flex;
-  justify-content: center;
   gap: 2rem;
+}
+
+.header__image {
+  position: relative;
+}
+
+.header__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0.5rem solid var(--extra-light);
+  border-radius: 2rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header__image img:nth-child(1) {
+  max-width: 350px;
+  transform: translate(-75%, -50%);
+}
+
+.header__image img:nth-child(2) {
+  max-width: 250px;
+  transform: translate(0%, -25%);
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__content > div {
+  max-width: 400px;
+  display: grid;
+  gap: 1rem;
+}
+
+.header__content .sub__header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.header__content h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.header__content .action__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.video__image {
+  position: relative;
+}
+
+.video__image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video__image span {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.video__image span i {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: red;
+  background-color: var(--extra-light);
+  border-radius: 100%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story > span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.destination__nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.destination__nav span {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.destination__nav span:hover {
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+}
+
+.destination__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.destination__card {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+}
+
+.destination__card img {
+  border-radius: 1rem;
+}
+
+.destination__details {
+  position: absolute;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--extra-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.destination__card:hover .destination__details {
+  bottom: 1rem;
+}
+
+.destination__title {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.destination__subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.trip {
+  background-color: var(--secondary-color);
+}
+
+.trip__container :is(.section__title, .section__subtitle, .view__all) {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.trip__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.trip__card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.trip__details {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background-color: var(--extra-light);
+  cursor: pointer;
+}
+
+.rating {
+  color: goldenrod;
+}
+
+.booking__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.book__now {
+  padding: 0.5rem 1.5rem;
+  color: var(--primary-color);
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book__now:hover {
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+}
+
+.gallary__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.image__gallary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.gallary__col {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+.gallary__col img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallary__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallary__content > div {
+  max-width: 400px;
+}
+
+.gallary__content .section__subtitle {
   margin-bottom: 2rem;
 }
 
-.footer__link {
-  font-size: 1.5rem;
+.subscribe {
+  background-color: var(--secondary-color);
 }
 
-.footer__copy {
-  text-align: center;
-  font-size: 0.875rem;
-  color: #64748b;
+.subscribe__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
+
+.subscribe__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  background-color: var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+}
+
+.subscribe__form input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: var(--text-dark);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  color: var(--secondary-color);
+}
+
+.footer__col h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.footer__col h3 span {
+  color: var(--primary-color);
+}
+
+.footer__col p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__col p:hover {
+  color: var(--primary-color);
+}
+
+.footer__col p span {
+  font-weight: 600;
+}
+
+.footer__col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  border-top: 1px solid var(--text-light);
+}
+
+@media (width < 1200px) {
+
+  
+  .header__image img:nth-child(1) {
+    max-width: 300px;
+  }
+  
+  .header__image img:nth-child(2) {
+    max-width: 200px;
+  }
+}
+
+@media (width < 900px) {
+  
+  .nav__links {
+    display: none;
+  }
+
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header__image {
+    min-height: 500px;
+  }
+
+  .destination__grid {
+    gap: 1rem;
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 600px) {
+  .destination__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallary__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subscribe__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
       `;
 
       editorRef.current = grapesjs.init({
@@ -345,7 +783,6 @@ a {
           },
         },
         components: templateHTML, // Load the template HTML
-        //   components: templateHTML,
         style: templateCSS, // Inject the CSS directly
 
         blockManager: {
@@ -354,7 +791,8 @@ a {
             {
               id: "section",
               label: "<b>Section</b>",
-              content: "<section><h1>This is a section</h1></section>",
+              content:
+                "<section><h1>You can insert a section here</h1></section>",
               category: "Basic",
             },
             {
@@ -372,6 +810,7 @@ a {
             },
           ],
         },
+
         styleManager: {
           sectors: [
             {
