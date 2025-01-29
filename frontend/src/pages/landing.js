@@ -3,7 +3,7 @@ import React from "react";
 import ActiveSlider from "./ActiveSlider";
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[rgb(35,35,103)] via-[#1c1c47] to-[#000000] text-white flex flex-col items-center">
+    <div className="min-h-screen  bg-gradient-to-t from-[#0d0d1e] to-[#1a0c5e]  text-white flex flex-col items-center">
       {" "}
       {/* Header */}
       <div className="w-full bg-[#1F1F1F] py-4 px-6 flex justify-between items-center shadow-md">
@@ -13,7 +13,7 @@ const Landing = () => {
         </button>
       </div>
       {/* Hero Section */}
-      <div className="relative w-full flex-grow flex flex-col items-center justify-center p-16 mt-3">
+      <div className="relative w-full flex-grow flex flex-col items-center justify-end p-16 mt-3">
         {/* Hero Text */}
         <div className="text-center space-y-6 sm:space-y-8 md:space-y-10">
           <p className="mt-12 sm:mt-16 md:mt-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-white drop-shadow-lg">
@@ -56,10 +56,9 @@ const Landing = () => {
           </button>
         </div>
       </div>
-
-{/*       
+      {/*       
       Templates Section */}
-     <div className="mt-16 w-3/4">
+      <div className="mt-16 w-3/4">
         <h3 className="text-lg text-left">or use our templates to start</h3>
         {/* Use ActiveSlider Component Here */}
         <ActiveSlider />
@@ -69,7 +68,6 @@ const Landing = () => {
 };
 
 export default Landing;
-
 
 // <div class="mt-16 w-3/4">
 //         <h3 class="text-lg text-left">or use our templates to start</h3>
