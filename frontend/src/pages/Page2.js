@@ -924,7 +924,7 @@ header {
   return (
     <div className="flex flex-col h-screen bg-[#1F1F1F]">
       {/* Header */}
-      <div className="w-full bg-[#1F1F1F] py-4 px-6 flex justify-between items-center shadow-xl shadow-[#3f3f3f]">
+      <div className="w-full bg-black py-4 px-6 flex justify-between items-center shadow-xl shadow-[#3f3f3f]">
         <h1 className="text-3xl font-bold text-white">WebGalaxy</h1>
         <button className="px-6 py-3 bg-[#0049F3] hover:bg-blue-700 rounded-lg border-none text-white">
           Your Profile
