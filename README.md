@@ -1,4 +1,5 @@
 # Text-to-Website Generator
+[Watch the Demo Video](https://drive.google.com/file/d/1DWafjOChBdZRsGwRChY4fefQVfb13tlW/view?usp=drive_link)
 
 ## Overview
 The **Text-to-Website Generator** is a web-based application designed to convert natural language descriptions into fully functional, responsive websites in real-time. This tool is tailored for users with minimal or no coding experience, allowing them to create professional-looking websites effortlessly. By leveraging advanced **AI-driven natural language processing (NLP)** and **predefined UI templates**, the platform translates user inputs into structured front-end code.
@@ -180,7 +181,11 @@ Here, the user will enter the prompt either to regenerate the whole website or u
 - **Complex user prompts** may generate incorrect layouts, requiring manual adjustments.
 - **Drag-and-drop editor responsiveness** may have issues on mobile devices.
 - **Performance optimization** is ongoing to further reduce generation time.
-
+- The **image content** does not always align with the **text description**.
+- Images occasionally **fail to load**, causing display issues.
+- At times, **changing the colour palette** results in **insufficient contrast** between the text and the background, affecting readability.
+- The Gemini server may occasionally experience **downtime**, disrupting content generation.
+-	When the Gemini API key **rate limit is exceeded**, it may cause the system to stop responding properly.
 ---
 
 ## Future Enhancements
