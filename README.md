@@ -1,6 +1,9 @@
 # Text-to-Website Generator
 [Watch the Demo Video](https://drive.google.com/drive/u/0/folders/1kUdMGM_qRKRFeiOPI_epeayjD0lZarUT)
 
+![WhatsApp Image 2025-02-03 at 21 08 51_75deab8f](https://github.com/user-attachments/assets/cb15104a-b60a-4a79-8645-c812b304d939)
+
+
 ## Overview
 The **Text-to-Website Generator** is a web-based application designed to convert natural language descriptions into fully functional, responsive websites in real-time. This tool is tailored for users with minimal or no coding experience, allowing them to create professional-looking websites effortlessly. By leveraging advanced **AI-driven natural language processing (NLP)** and **predefined UI templates**, the platform translates user inputs into structured front-end code.
 
