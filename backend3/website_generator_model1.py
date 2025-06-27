@@ -42,8 +42,12 @@ def process(user_prompt):
     load_dotenv(dotenv_path="product_development.env")
     palette_file = './palette.json'
     template_used = './template_used_details.json'
+    success = load_dotenv(dotenv_path="product_development.env")
+    print("Loaded .env?", success)  # should be True
+    print("Key:", os.getenv("GEMINI_API_KEY_1"))
 
     GEMINI_API_KEY_1 = os.getenv("GEMINI_API_KEY_1")
+    print(GEMINI_API_KEY_1)
     GEMINI_API_KEY_2 = os.getenv("GEMINI_API_KEY_2")
     GEMINI_API_KEY_3 = os.getenv("GEMINI_API_KEY_3")
     UNSPLASH_API_KEY=os.getenv('UNSPLASH_API_KEY')
@@ -64,9 +68,9 @@ def process(user_prompt):
 
     # Repository configuration
     repo_url = "https://github.com/Kriti-Product-Development/all-templates"
-    local_repo_path = "./local_repo1"
+    local_repo_path = "local_repo1"
 
-    local_repo_path = "./local_repo1"
+
 
     result_path = './result.json'
     prompt_file = './prompt.json'
@@ -404,6 +408,8 @@ def process(user_prompt):
         
         for template_name, details in template_details.items():
             # Combine README content and template name for matching
+            if template_name.startswith("."):
+                continue
             description = f"{template_name} {details.get('readme_content', '')}"
             descriptions.append(description)
             template_names.append(template_name)
@@ -482,6 +488,16 @@ def process(user_prompt):
     # Usage example:food blog
 
     destination_folder = "./generated"
+
+    # Remove the folder if it exists
+    if os.path.exists(destination_folder):
+        shutil.rmtree(destination_folder)
+        print("deleted generated folder")
+
+    # Create the folder again
+    os.makedirs(destination_folder)
+
+
     if clean_and_copy_folder(template_path, destination_folder):
         print("Template files prepared successfully")
     else:
@@ -563,7 +579,8 @@ def process(user_prompt):
         try:
             # Configure the Gemini API
 
-            
+            # genai.configure(api_key=api_key)
+            # model_1 = genai.GenerativeModel('gemini-pro')
             # Construct the full prompt
             full_prompt = f"""
             You are an expert web developer. Please modify the following HTML according to these instructions:
