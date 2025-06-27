@@ -168,7 +168,7 @@ load_dotenv("product_development.env")
 #### 1. 
 To generate a website based on user input, run:
 ```bash
-python website_generator_model.py
+python website_generator_model1.py
 ```
 Then, enter the prompt specifying the website you want to generate. The generated website will be stored in the generated folder.
 #### 2. Website Regeneration
