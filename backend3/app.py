@@ -15,7 +15,7 @@ def predict():
     user_input = data.get("text", "")
     
     # Generate the website files
-    folder_name, html_conten, css_content = website_generator_model1.process(user_input)
+    folder_name, html_content, css_content = website_generator_model1.process(user_input)
     
     return jsonify({
         "message": "Website ready!",
