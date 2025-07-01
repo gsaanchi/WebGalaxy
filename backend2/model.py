@@ -1,18 +1,13 @@
-
 import os
 import time
-
 
 def process(text):
     # Generate the folder and files
     folder_name = "generated_website"
     time.sleep(5)
-
-    
     # Create a folder if it doesn't exist
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
-    
     # Create HTML content based on user input
     html_content = f"""
     <!DOCTYPE html>

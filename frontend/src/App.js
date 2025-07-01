@@ -14,8 +14,8 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/PreviewPage" element={<PreviewPage />} />
         <Route path="/Page2" element={<Page2 />} />
-        <Route path="/" element={<Signup />} />
-        <Route path="/landing" element={<Landing />} />
+        {/* <Route path="/" element={<Signup />} /> */}
+        <Route path="/" element={<Landing />} />
         <Route path="/preview/:index" element={<PageTemplate/>}/>
       </Routes>
     </Router>

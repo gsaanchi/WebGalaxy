@@ -1780,6 +1780,8 @@ def process(user_prompt):
     html_content, css_content = get_html_and_css_from_folder(destination_folder)  
     return destination_folder, html_content, css_content      
         
-user_prompt=input("Enter prompt: ")
-folder, html, css = process(user_prompt)
+if __name__ == "__main__":
+    user_prompt = input("Enter prompt: ")
+    folder, html, css = process(user_prompt)
+
 
