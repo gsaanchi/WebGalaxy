@@ -145,6 +145,7 @@ npm start
 - TheColorAPI
 - Unsplash API
 
+<<<<<<< HEAD
 ## Known Issues & Bugs
 - Complex or ambiguous prompts may generate misaligned layouts.
 - Image API occasionally fails or mismatches images to context.
@@ -152,6 +153,66 @@ npm start
 - Palette contrast issues in some themes.
 - Gemini server downtime may affect generation.
 - API rate limits on Gemini may interrupt response pipelines.
+=======
+### Features
+- AI-driven template selection and customization.
+- Google Gemini API integration for content extraction and transformation.
+- Automated HTML structure improvements.
+- Dynamic color palette generation based on themes.
+- Intelligent image selection via Unsplash API.
+- Regeneration of existing templates using alternative matches.
+
+### Installation
+#### Prerequisites
+Ensure you have Python installed
+Set up the environment variables by creating a .env file or using product_development.env.
+Set up Pipenv and install dependencies by running:
+  pipenv shell
+To generate a fresh requirements.txt file from an existing environment:
+  pip freeze > requirements.txt
+  
+
+### Environment Setup
+Create a `.env` file or use `product_development.env`:
+```env
+GEMINI_API_KEY_1=your_key_here
+GEMINI_API_KEY_2=your_key_here
+GEMINI_API_KEY_3=your_key_here
+UNSPLASH_API_KEY=your_key_here
+```
+Load variables in Python:
+```python
+from dotenv import load_dotenv
+load_dotenv("product_development.env")
+```
+
+### How to Start Website Generation (this is where the model runs)
+#### 1. 
+To generate a website based on user input, run:
+```bash
+python website_generator_model1.py
+```
+Then, enter the prompt specifying the website you want to generate. The generated website will be stored in the generated folder.
+#### 2. Website Regeneration
+For regenerating templates with an alternative match:
+```bash
+python update_regenerate.py
+```
+Here, the user will enter the prompt either to regenerate the whole website or update specific sections based on the prompt. The updated website will be saved in the generated folder, where the user can run and check the modifications.
+
+---
+
+## Known Issues & Bug
+- **Complex user prompts** may generate incorrect layouts, requiring manual adjustments.
+- **Drag-and-drop editor responsiveness** may have issues on mobile devices.
+- **Performance optimization** is ongoing to further reduce generation time.
+- The **image content** does not always align with the **text description**.
+- Images occasionally **fail to load**, causing display issues.
+- At times, **changing the colour palette** results in **insufficient contrast** between the text and the background, affecting readability.
+- The Gemini server may occasionally experience **downtime**, disrupting content generation.
+-	When the Gemini API key **rate limit is exceeded**, it may cause the system to stop responding properly.
+---
+>>>>>>> upstream/main
 
 ## Future Enhancements
 
