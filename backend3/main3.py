@@ -888,12 +888,12 @@ def add_images_html_files(base_directory, keywords):
                         # Overwrite the original file
                         with open(file_path, 'w', encoding='utf-8') as file:
                             file.write(updated_html)
-                        print(f"✅ Updated images in file: {file_path}")
+                        print(f"Updated images in file: {file_path}")
                     else:
-                        print(f"⚠️ No updates made to: {file_path}")
+                        print(f" No updates made to: {file_path}")
 
                 except Exception as e:
-                    print(f"❌ Error processing html images{file_path}: {e}")
+                    print(f"Error processing html images{file_path}: {e}")
 html_files_directory = destination_folder
 process_html_files_recursively(html_files_directory, html_prompt)
 add_images_html_files(html_files_directory, keywords)
